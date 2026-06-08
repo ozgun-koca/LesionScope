@@ -177,9 +177,10 @@ Run the cells from top to bottom. The notebook downloads the dataset, creates th
 
 ## Authors
 
-- **Kağan Canerik**
-- **Özgün Serergün Koca** — [GitHub](https://github.com/ozgun-koca) · ozgunserergun@gmail.com  
-  B.Sc. Artificial Intelligence Engineering, Hacettepe University
+- Kağan Canerik — [GitHub](https://github.com/KaganCanerik)
+- Özgün Serergün Koca — [GitHub](https://github.com/ozgun-koca) · ozgunserergun@gmail.com
+
+B.Sc. Artificial Intelligence Engineering, Hacettepe University
 
 ---
 
