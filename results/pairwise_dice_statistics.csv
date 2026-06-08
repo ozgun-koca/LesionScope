@@ -1,0 +1,7 @@
+Model A,Model B,Mean Dice A,Mean Dice B,Mean Diff B-A,Paired t p,Wilcoxon p,Cohen dz
+U-Net MT Scratch,Attention U-Net MT Scratch,0.778789,0.743798,-0.034991,0.112146,0.537171,-0.147992
+U-Net MT Scratch,U-Net MT Pretrained,0.778789,0.808928,0.030139,0.195757,0.178968,0.120299
+U-Net MT Scratch,Attention U-Net MT Pretrained,0.778789,0.755963,-0.022827,0.419041,0.757487,-0.074975
+Attention U-Net MT Scratch,U-Net MT Pretrained,0.743798,0.808928,0.06513,0.001537,0.087307,0.299966
+Attention U-Net MT Scratch,Attention U-Net MT Pretrained,0.743798,0.755963,0.012165,0.627389,0.682593,0.044995
+U-Net MT Pretrained,Attention U-Net MT Pretrained,0.808928,0.755963,-0.052966,0.031866,0.199306,-0.200831

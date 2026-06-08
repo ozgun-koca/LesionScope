@@ -1,0 +1,4 @@
+split,total,benign,malignant,normal,benign_pct,malignant_pct,normal_pct
+train,546,306,147,93,56.0,26.9,17.0
+val,117,65,32,20,55.6,27.4,17.1
+test,117,66,31,20,56.4,26.5,17.1

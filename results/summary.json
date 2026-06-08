@@ -1,0 +1,106 @@
+{
+  "config": {
+    "image_size": 256,
+    "batch_size": 32,
+    "num_epochs": 120,
+    "lr": 0.0003,
+    "patience": 20,
+    "lambda_cls": 0.4,
+    "optimizer": "AdamW + OneCycleLR",
+    "seg_loss": "BCE(0.4) + Tversky(0.6, alpha=0.7, beta=0.3)",
+    "cls_loss": "Class-weighted CrossEntropyLoss",
+    "test_threshold": 0.5,
+    "post_process": "Largest connected component filtering active",
+    "class_aware_suppression": "If predicted class is normal, predicted mask is forced empty",
+    "seed": 42,
+    "train_size": 546,
+    "val_size": 117,
+    "test_size": 117
+  },
+  "models": {
+    "unet_scratch": {
+      "display_name": "U-Net MT Scratch",
+      "checkpoint": "results/weights/best_unet_scratch_mt.pth",
+      "test_threshold": 0.5,
+      "test_overall_dice_mean": 0.7787893937283555,
+      "test_lesion_dice_mean": 0.7537975161384064,
+      "test_normal_dice_mean": 0.9000000000396084,
+      "test_overall_iou_mean": 0.7143800509908987,
+      "test_lesion_iou_mean": 0.676107896547866,
+      "test_hd95_mean": 23.55037494568111,
+      "test_precision_mean": 0.8433943900205827,
+      "test_recall_mean": 0.7556669420972026,
+      "test_cls_acc": 0.8547008547008547,
+      "test_macro_f1": 0.8424606151537883,
+      "test_macro_auc": 0.9478608659123391,
+      "test_per_class_auc": {
+        "normal": 0.9804123711340206,
+        "benign": 0.9361259655377303,
+        "malignant": 0.9270442610652664
+      }
+    },
+    "attunet_scratch": {
+      "display_name": "Attention U-Net MT Scratch",
+      "checkpoint": "results/weights/best_attunet_scratch_mt.pth",
+      "test_threshold": 0.5,
+      "test_overall_dice_mean": 0.743797971738403,
+      "test_lesion_dice_mean": 0.7322099246703807,
+      "test_normal_dice_mean": 0.8000000000183111,
+      "test_overall_iou_mean": 0.6824046232615897,
+      "test_lesion_iou_mean": 0.6581581538272141,
+      "test_hd95_mean": 29.891169958020292,
+      "test_precision_mean": 0.7727662864353486,
+      "test_recall_mean": 0.748110104235035,
+      "test_cls_acc": 0.7777777777777778,
+      "test_macro_f1": 0.7584204413472707,
+      "test_macro_auc": 0.9451236986893413,
+      "test_per_class_auc": {
+        "normal": 0.9628865979381442,
+        "benign": 0.9349376114081996,
+        "malignant": 0.9375468867216804
+      }
+    },
+    "unet_pretrained": {
+      "display_name": "U-Net MT Pretrained",
+      "checkpoint": "results/weights/best_unet_pretrained_mt.pth",
+      "test_threshold": 0.5,
+      "test_overall_dice_mean": 0.8089283353864475,
+      "test_lesion_dice_mean": 0.7798413942286181,
+      "test_normal_dice_mean": 0.9500000000019201,
+      "test_overall_iou_mean": 0.7421359141314444,
+      "test_lesion_iou_mean": 0.6992773397251609,
+      "test_hd95_mean": 22.671062211756873,
+      "test_precision_mean": 0.86144132681095,
+      "test_recall_mean": 0.795368309048574,
+      "test_cls_acc": 0.8547008547008547,
+      "test_macro_f1": 0.8519608125907339,
+      "test_macro_auc": 0.9458161478060556,
+      "test_per_class_auc": {
+        "normal": 0.9912371134020619,
+        "benign": 0.9328579916815211,
+        "malignant": 0.9133533383345837
+      }
+    },
+    "attunet_pretrained": {
+      "display_name": "Attention U-Net MT Pretrained",
+      "checkpoint": "results/weights/best_attunet_pretrained_mt.pth",
+      "test_threshold": 0.5,
+      "test_overall_dice_mean": 0.7559626456124262,
+      "test_lesion_dice_mean": 0.7881198921278983,
+      "test_normal_dice_mean": 0.6000000000123868,
+      "test_overall_iou_mean": 0.6870164882847402,
+      "test_lesion_iou_mean": 0.7049580322584212,
+      "test_hd95_mean": 23.901265612160504,
+      "test_precision_mean": 0.7519687550024012,
+      "test_recall_mean": 0.7920123019364432,
+      "test_cls_acc": 0.7435897435897436,
+      "test_macro_f1": 0.6872215260373156,
+      "test_macro_auc": 0.9028355376909843,
+      "test_per_class_auc": {
+        "normal": 0.9159793814432989,
+        "benign": 0.9187462863933452,
+        "malignant": 0.8737809452363091
+      }
+    }
+  }
+}
